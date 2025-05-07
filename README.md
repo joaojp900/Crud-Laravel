@@ -89,14 +89,6 @@ Route::get('welcome', [ProdutosController::class, 'index'])->name('Produtos.welc
 * **Produtos:** Nome, Estoque, Preço, Descrição
 * **Vendas:** Cliente, Produto, Quantidade (com baixa automática no estoque)
 
----
-
- 
-
- 
-
----
-
 ## 🙋‍♂️ Autor
 
 Feito com 💻 por **João Pedro Gabriel**
