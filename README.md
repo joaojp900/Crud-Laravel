@@ -1,5 +1,7 @@
  
-````  
+ 
+
+````markdown
 # 🧩 Crud Laravel
 
 Este é um projeto simples de **CRUD** (Create, Read, Update, Delete) desenvolvido com o framework **Laravel**, ideal para estudos e aplicações iniciais com PHP moderno, Blade, Eloquent ORM e rotas web. O sistema permite o gerenciamento de **clientes**, **produtos** e **vendas**, incluindo controle de estoque automático.
@@ -43,47 +45,55 @@ composer install
 # Copie o arquivo de exemplo do .env
 cp .env.example .env
 
-# Gere a key do Laravel
+# Gere a chave da aplicação
 php artisan key:generate
+````
 
-# Configure seu banco de dados no arquivo .env
+Abra o arquivo `.env` e configure o banco de dados:
+
+```dotenv
 DB_DATABASE=seu_banco
 DB_USERNAME=seu_usuario
 DB_PASSWORD=sua_senha
+```
 
-# Rode as migrations
+Rode as migrations:
+
+```bash
 php artisan migrate
+```
 
+Inicie o servidor:
 
-# Inicie o servidor local
+```bash
 php artisan serve
-````
+```
 
-Acesse: [[http://localhost:8000](http://localhost:8000/welcome))
+### ✅ Acesse a aplicação em:
+
+```
+http://localhost:8000/welcome
+```
+
+> Rota configurada no arquivo de rotas:
+
+```php
+Route::get('welcome', [ProdutosController::class, 'index'])->name('Produtos.welcome');
+```
 
 ---
 
 ## 🗃️ Estrutura das Tabelas
 
-* **Clientes:** Nome, Email, CPF , Senha
+* **Clientes:** Nome, Email, CPF, Senha
 * **Produtos:** Nome, Estoque, Preço, Descrição
 * **Vendas:** Cliente, Produto, Quantidade (com baixa automática no estoque)
 
 ---
 
-## 🛠️ Como contribuir
+ 
 
-1. Faça um fork
-2. Crie uma branch: `git checkout -b minha-mudanca`
-3. Commit suas alterações: `git commit -m 'Minha alteração'`
-4. Push para a branch: `git push origin minha-mudanca`
-5. Abra um pull request 🙌
-
----
-
-## 📄 Licença
-
-Este projeto é open-source e está sob a licença MIT.
+ 
 
 ---
 
@@ -96,7 +106,4 @@ Feito com 💻 por **João Pedro Gabriel**
 
 ```
 
----
-
-Se quiser, posso criar esse `README.md` automaticamente e te mandar o arquivo pronto para colocar no repositório. Deseja isso?
-```
+ 
