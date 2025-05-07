@@ -50,12 +50,7 @@
                       <td>{{$venda->Produtos}}</td>
                       <td>{{$venda->quantidade}}</td>    
                       <td>{{$venda->created_at}}</td>
-                      
-                    <td>
-                        <button type="button" class="btn btn-primary">
-                            <a class="link-light link-offset-2 link-underline link-underline-opacity-0" href="{{ route('vendas.edit', ['id' => $venda->id]) }}">Atualizar</a>
-                        </button>
-                    </td>
+                    
                     
                       <td>
                         <form action="{{route('vendas.destroy', $venda->id)}}" method="POST">
